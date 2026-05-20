@@ -1,16 +1,11 @@
 import React from 'react';
-// @ts-ignore
-import saga from '../../../assets/pictures/projects/software/saga.mp4';
-// @ts-ignore
-import computer from '../../../assets/pictures/projects/software/computer.mp4';
-// @ts-ignore
-import als from '../../../assets/pictures/projects/software/als.mp4';
-// @ts-ignore
-import scroll from '../../../assets/pictures/projects/software/scroll.mp4';
-
-
 import ResumeDownload from '../ResumeDownload';
-import VideoAsset from '../../general/VideoAsset';
+
+// Google Drive embed URLs
+const computerEmbed = "https://drive.google.com/file/d/1jg8i48DlsKK9hme-n8dUjPiUiSoWLcG8/preview";
+const sagaEmbed    = "https://drive.google.com/file/d/1zOkaLNmgUbLBbhsKNz5Z1dbtlrNo_UZh/preview";
+const scrollEmbed  = "https://drive.google.com/file/d/1yDVp64gkMkjfKHwAPcGa2WgW7xD64DGF/preview";
+const alsEmbed     = "https://drive.google.com/file/d/1JF46otiBoK2fHbdaNCL5CLE0mdO9TYhQ/preview";
 
 export interface SoftwareProjectsProps {}
 
@@ -50,15 +45,23 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = (props) => {
                 </ul>
                 <br />
                 <div className="captioned-image">
-                    <VideoAsset src={computer} />
+                    <iframe
+                        src={computerEmbed}
+                        width="100%"
+                        height="480"
+                        allow="autoplay"
+                        style={styles.iframe}
+                        title="Welding Simulator Demo"
+                    ></iframe>
                     <p style={styles.caption}>
                         <sub>
                             <b>Video 1:</b> Welding Simulator demo video showcasing the ARC welding process with socket-interaction, and real-time feedback systems.
                         </sub>
                     </p>
                 </div>
-              
+
                 <h3>Links:</h3>
+                <ul>
                     <li>
                         <a
                             rel="noreferrer"
@@ -70,7 +73,7 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = (props) => {
                             </p>
                         </a>
                     </li>
-                
+                </ul>
                 <p>
                     I'm skipping over a lot of details in exchange for brevity,
                     but I do plan on doing a more in depth breakdown for those
@@ -103,11 +106,18 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = (props) => {
                 </ul>
                 <br />
                 <div className="captioned-image">
-                    <VideoAsset src={saga} />
+                    <iframe
+                        src={sagaEmbed}
+                        width="100%"
+                        height="480"
+                        allow="autoplay"
+                        style={styles.iframe}
+                        title="Painting Simulator Demo"
+                    ></iframe>
                     <div style={styles.caption}>
                         <p>
                             <sub>
-                             <b>Figure 2: </b> Demo video of Painting Simulator showcasing the painting process with real-time hardware interaction and signal filtering for smooth input.
+                                <b>Figure 2: </b> Demo video of Painting Simulator showcasing the painting process with real-time hardware interaction and signal filtering for smooth input.
                             </sub>
                         </p>
                     </div>
@@ -132,10 +142,10 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = (props) => {
                 </ul>
                 <p>
                     A demo will be available on GitHub for Meta Quest with controller support.
-                </p> 
+                </p>
             </div>
             <div className="text-block">
-                <h2> ULSB MK III Training Module </h2>
+                <h2>ULSB MK III Training Module</h2>
                 <br />
                 <p>
                     ULSB MK III Training Module is a VR-based military communication training simulator developed in Unity for Edgeforce Solutions with support from the Arty Center. I led the design and implementation to train personnel in operating and maintaining military communication systems, covering the full workflow from hardware setup through software operation in an immersive environment.
@@ -159,14 +169,20 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = (props) => {
                 </ul>
                 <br />
                 <div className="captioned-image">
-                    <VideoAsset src={scroll} />
+                    <iframe
+                        src={scrollEmbed}
+                        width="100%"
+                        height="480"
+                        allow="autoplay"
+                        style={styles.iframe}
+                        title="ULSB MK III Training Module Demo"
+                    ></iframe>
                     <p style={styles.caption}>
                         <sub>
                             <b>Figure 3:</b> ULSB MK III Training Module demo video showcasing the communication equipment setup with real-time hand interaction and guided training.
                         </sub>
                     </p>
                 </div>
-                
                 <br />
                 <h3>Links:</h3>
                 <ul>
@@ -187,8 +203,8 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = (props) => {
                 </p>
             </div>
 
-                  <div className="text-block">
-                <h2> ALS maintenance training module  </h2>
+            <div className="text-block">
+                <h2>ALS Maintenance Training Module</h2>
                 <br />
                 <p>
                     ALS Maintenance Training Module — A VR-based military maintenance training simulator developed in Unity for training military personnel in understanding the complete working and maintenance process of ALS vehicle systems. Built using the Meta XR SDK with custom hand tracking and gesture interaction systems, the simulator provides an immersive and practical learning experience for trainees.
@@ -198,12 +214,12 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = (props) => {
                 </p>
                 <h4>Key Features:</h4>
                 <ul>
-                   <li>Advanced VR-based military vehicle maintenance training</li> 
-                   <li> Custom hand tracking and gesture interaction system</li> 
-                   <li> Detailed engine and mechanical system visualization</li> 
-                   <li> High-quality animations for explaining internal working processes</li> 
-                   <li> Hands-on disassembly and assembly training modules</li> 
-                   <li>Interactive learning environment for practical maintenance training</li> 
+                    <li>Advanced VR-based military vehicle maintenance training</li>
+                    <li>Custom hand tracking and gesture interaction system</li>
+                    <li>Detailed engine and mechanical system visualization</li>
+                    <li>High-quality animations for explaining internal working processes</li>
+                    <li>Hands-on disassembly and assembly training modules</li>
+                    <li>Interactive learning environment for practical maintenance training</li>
                 </ul>
                 <h4>Training Modules:</h4>
                 <ul>
@@ -213,14 +229,20 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = (props) => {
                 </ul>
                 <br />
                 <div className="captioned-image">
-                    <VideoAsset src={als} />
+                    <iframe
+                        src={alsEmbed}
+                        width="100%"
+                        height="480"
+                        allow="autoplay"
+                        style={styles.iframe}
+                        title="ALS Maintenance Training Module Demo"
+                    ></iframe>
                     <p style={styles.caption}>
                         <sub>
-                            <b>Figure 3:</b>ALS Maintenance Training Module demo video showcasing the engine system visualization and maintenance training workflow with hand tracking interaction.
+                            <b>Figure 4:</b> ALS Maintenance Training Module demo video showcasing the engine system visualization and maintenance training workflow with hand tracking interaction.
                         </sub>
                     </p>
                 </div>
-                
                 <br />
                 <h3>Links:</h3>
                 <ul>
@@ -246,9 +268,11 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = (props) => {
 };
 
 const styles: StyleSheetCSS = {
-    video: {
+    iframe: {
         width: '100%',
-        padding: 12,
+        height: 480,
+        border: 'none',
+        borderRadius: 4,
     },
     caption: {
         width: '80%',
